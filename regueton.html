@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVision</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    
+    
+   
+
+
+    
+
+</head>
+<body>
+    
+
+  
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>TechVision</h1>
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li class="menu-select"><a href="#Blog" class="text-menu-select">Blog</a></li>
+                        <li><a href="#">Sobre mí</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<br>
+    
+    <div class="container-content">
+        <article>
+            <h1>Un analisis del regueton en la Era digital</h1>
+            <p>El reguetón, ese ritmo contagioso que ha conquistado las listas de éxitos globales, es más que una simple moda musical; es un fenómeno cultural que merece ser estudiado.Desde sus humildes comienzos en las calles de Panamá y Puerto Rico hasta su actual estatus de superestrella internacional, el reguetón ha experimentado una transformación notable hasta que hoy en dia es el genero mas escuchado en algunos paises.</p>
+
+            <h1>Orígenes y Primeros Pasos</h1>
+            <img src="panama.jpeg" alt="">
+            <p>El reguetón se originó a principios de la década de 1990, fusionando el reggae en español con ritmos de hip-hop y dancehall1. Artistas como El General en Panamá y Vico C en Puerto Rico fueron pioneros, mezclando sonidos locales con influencias extranjeras para crear algo completamente nuevo.</p>
+            <img src="el general.jpeg" alt="">
+            <img src="vico-c.jpeg" alt="">
+
+            <h1>Expansión y Popularización</h1>
+            <p>A medida que el género ganaba popularidad, artistas como Daddy Yankee y Don Omar llevaron el reguetón a nuevas alturas en la década de 2000, con éxitos que resonaron tanto en Latinoamérica como en comunidades hispanohablantes en Estados Unidos. El ejemplo mas notorio de esto fue "Gasolina" de Daddy Yankeec convirtiendose en la primera cancion en la historia del reguetón en llegar a ocupar puestos altos en las listas musicales más importantes como el Hot Latin Songs, Billboard Hot 100 y el European Hot 100, además de ser la primera canción urbana en ser nominada a los Premios Grammy Latinos.</p>
+
+            <img src="gasolina.jpeg" alt="">
+
+
+
+
+            <canvas id="myChart" style="width:100%;max-width:600px">
+            </canvas>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', (event) => {
+
+                    // Data for the table
+const data = [
+{ country: 'United States', continent: 'North America', population: '333.3 million', topGenres: 'Pop, Hip-Hop/Rap, Latin', topArtists: 'Bad Bunny' },
+{ country: 'Brazil', continent: 'South America', population: '217.2 million', topGenres: 'Latin, Pop, Hip-Hop/Rap', topArtists: 'Ana Castela' },
+{ country: 'Italy', continent: 'Europe', population: '58.9 million', topGenres: 'Pop, Hip-Hop/Rap, Latin', topArtists: 'Bad Bunny' },
+{ country: 'Mexico', continent: 'North America', population: '129.2 million', topGenres: 'Latin, Pop, Alternative', topArtists: 'Bad Bunny' },
+{ country: 'Spain', continent: 'Europe', population: '47.3 million', topGenres: 'Latin, Latin Pop, Pop', topArtists: 'Bad Bunny' },
+{ country: 'Argentina', continent: 'South America', population: '47.3 million', topGenres: 'Latin, Pop, Latin Pop', topArtists: 'Bad Bunny' },
+{ country: 'Colombia', continent: 'South America', population: '52.2 million', topGenres: 'Latin, Latin Pop, Pop', topArtists: 'Bad Bunny' },
+{ country: 'Chile', continent: 'South America', population: '18.4 million', topGenres: 'Latin, Pop, Latin Pop', topArtists: 'Bad Bunny' },
+{ country: 'Portugal', continent: 'Europe', population: '10.4 million', topGenres: 'Pop, Latin, Hip-Hop/Rap', topArtists: 'Peggy Gou' },
+{ country: 'Peru', continent: 'South America', population: '34.4 million', topGenres: 'Latin, Pop, Latin Pop', topArtists: 'Bad Bunny' }
+
+];
+
+                
+                    
+                    const table = document.createElement('table');
+                    table.setAttribute('id', 'musicData');
+                
+                    
+                    const headerRow = document.createElement('tr');
+                    ['Country', 'Continent', 'Population', 'Top Genres', 'Top Artists'].forEach(text => {
+                        const headerCell = document.createElement('th');
+                        headerCell.textContent = text;
+                        headerRow.appendChild(headerCell);
+                    });
+                    table.appendChild(headerRow);
+                
+                    
+                    data.forEach(item => {
+                        const row = document.createElement('tr');
+                        Object.values(item).forEach(text => {
+                            const cell = document.createElement('td');
+                            cell.textContent = text;
+                            row.appendChild(cell);
+                        });
+                        table.appendChild(row);
+                    });
+                
+                    
+                    const article = document.querySelector('.container-content article');
+                    const paragraph = article.querySelector('p');
+                    article.insertBefore(table, paragraph.nextSibling);
+                });
+
+            </script>
+
+
+            <h1>El Reguetón en la Era Digital</h1>
+            <p>La era digital ha sido un catalizador para la expansión del reguetón, llevándolo a niveles de popularidad sin precedentes. Con la llegada de plataformas de streaming como Spotify, el regueton es mas disponible que nunca y los subcriptores de Spotify han tomado nota de ello.Por ejemplo durante tres años consecutivos el artista mas reproducido fue un reguetonero superando generos mas establecidos a nivel mundial como el Pop.</p>
+
+            <canvas id="masreproducido" width="400" height="200"></canvas>
+
+           <script>
+           const ctx = document.getElementById('masreproducido').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            '2017 Ed Sheeran', 
+            '2018 Drake', 
+            '2019 Post Malone', 
+            '2020 Bad Bunny', 
+            '2021 Bad Bunny', 
+            '2022 Bad Bunny', 
+            '2023 Taylor Swift'
+        ],
+        datasets: [{
+            label: 'Cantidad de reproducciones (en  miles de millones)',
+            data: [6.3, 8.2, 6.5, 8.3, 9.1, 18.5, 26.1],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            datalabels: {
+                color: '#000',
+                anchor: 'end',
+                align: 'top',
+                formatter: function(value, conteSxt) {
+                    return value + 'M';
+                }
+            }
+        }
+    },
+    plugins: [ChartDataLabels]
+});
+
+    
+
+        </script>
+
+        <br>
+
+        <h1>Album mas escuchado</h1>
+        <p>Bad Bunny continuo rompiendo records cuando estreno su album "Un Verano sin Ti". Siendo el album mas escuchado en la historia de Spotify y alcanzando los primeros lugares en Latino America, Europa y Estados Unidos. Especialmente en Estados Unidos se conviertio en el primer album en español en acabar el año siendo el numero 1.</p>
+
+            <canvas id="miGraficaDeBarras"></canvas>
+        <script>
+        const album = document.getElementById('miGraficaDeBarras').getContext('2d');
+const datos = {
+  labels: ['Un verano sin ti - Bad Bunny', '+ (Deluxe) - Ed Sheeran', 'Starboy (Deluxe) - The Weeknd', 'Hollywood\'s Bleeding - Post Malone', 'After Hours (Deluxe) - The Weeknd', 'Sour - Olivia Rodrigo', 'Dua Lipa (Complete Edition) - Dua Lipa', 'Future Nostalgia (The Moonlight Edition) - Dua Lipa', 'Beerbongs & Bentleys - Post Malone', 'When We All Fall Asleep, Where Do We Go? - Billie Eilish'],
+  datasets: [{
+    label: 'Reproducciones (en millones)',
+    data: [16.43, 14.78, 14.07, 12.65, 12.30, 12.29, 12.28, 12.23, 11.73, 11.00],
+    backgroundColor: 'rgba(0, 123, 255, 0.5)',
+    borderColor: 'rgba(0, 123, 255, 1)',
+    borderWidth: 1
+  }]
+};
+
+const miGraficaDeBarras = new Chart(album, {
+  type: 'bar',
+  data: datos,
+  options: {
+    indexAxis: 'y',
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: false
+      }
+    }
+  }
+});
+        </script>
+
+           
+
+           
+        </article>
+
+</body>
+
+</html>
+
+    
