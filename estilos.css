@@ -234,17 +234,16 @@ footer a {
     padding: 5px;
 }
 
-/* Add this CSS to your estilos.css file */
+
 table {
-    width: 100%; /* Adjust the width as needed */
-    border-collapse: separate; /* Ensures that spacing is applied */
-    border-spacing: 0 10px; /* Adjust the second value for horizontal spacing */
+    width: 100%; 
+    border-collapse: separate; 
+    border-spacing: 0 10px; /
 }
 
 td {
-    padding: 8px; /* Adjust the padding as needed for spacing */
-    text-align: center; /* Optional: centers the text in the cell */
-    /* Add other styles as needed */
+    padding: 8px; 
+    text-align: center;
 }
 
 
